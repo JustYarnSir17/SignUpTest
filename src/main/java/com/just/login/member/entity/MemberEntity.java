@@ -25,27 +25,27 @@ public class MemberEntity {
     @Column
     private String MemberName;
 
-    @Column
-    @Nullable
-    private Double weight;
-
-    @Column
-    @Nullable
-    private Double height;
-
-    @Column
-    @Nullable
-    private Double BMI;
+//    @Column
+//    @Nullable
+//    private Double weight;
+//
+//    @Column
+//    @Nullable
+//    private Double height;
+//
+//    @Column
+//    @Nullable
+//    private Double BMI;
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO) {
         MemberEntity memberEntity = new MemberEntity();
         memberEntity.setId(memberDTO.getId());
-        memberEntity.setMemberEmail(memberEntity.getMemberEmail());
-        memberEntity.setMemberName(memberEntity.getMemberName());
-        memberEntity.setMemberName(memberEntity.getMemberName());
-        memberEntity.setWeight(memberDTO.getWeight());
-        memberEntity.setHeight(memberDTO.getHeight());
-        memberEntity.setBMI(memberDTO.getBmi());
+        memberEntity.setMemberEmail(memberDTO.getMemberEmail());
+        memberEntity.setMemberName(memberDTO.getMemberName());
+        memberEntity.setMemberPassword(memberDTO.getMemberPassword());
+//        memberEntity.setWeight(memberDTO.getWeight());
+//        memberEntity.setHeight(memberDTO.getHeight());
+//        memberEntity.setBMI(memberDTO.getBmi());
         return  memberEntity;
     }
 }

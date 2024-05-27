@@ -15,7 +15,7 @@ public class MemberController {
     private final MemberService memberService;
 
     @GetMapping("/member/save")
-    public String save() {
+    public String saveForm() {
         return "save";
     }
 
